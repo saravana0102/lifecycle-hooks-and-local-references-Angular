@@ -1,0 +1,13 @@
+<hello name="{{ name }}"></hello>
+<p> In this example we can get knowledge on <b>Local reference in template,ViewChild,Content child and lifecycle hooks</b></p>
+
+<button (click)="onChangeTest()">Change Item Name</button>
+<button (click)="onDestroyFirstElement()">Destroy Component</button>
+<app-add-item *ngFor="let item of itemDetails" 
+(addedItem)="onAddItem($event)" 
+[nameOfItem]="item.itemName">
+<p #exampleText>Items List</p>
+<ul>
+  <li>{{item.itemName}}</li>
+</ul>  
+</app-add-item>

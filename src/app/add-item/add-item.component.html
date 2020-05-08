@@ -1,0 +1,9 @@
+<p>Add Item</p>
+<hr>
+<input type="text" placeholder="itemName" #itemName>
+<hr>
+<input type="text" placeholder="itemName" #itemDesc>
+<hr>
+<button (click)="onAddItem(itemName.value)">Add</button>
+<hr>
+<ng-content></ng-content>
